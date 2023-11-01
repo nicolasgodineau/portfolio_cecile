@@ -1,7 +1,12 @@
+import { Container, Typography } from "@mui/material";
 import React from "react";
 
 function contact() {
-    return <div>contact</div>;
+    return (
+        <Container>
+            <Typography>Contact</Typography>
+        </Container>
+    );
 }
 
 export default contact;
