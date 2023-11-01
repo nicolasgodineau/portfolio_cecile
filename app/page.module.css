@@ -1,13 +1,13 @@
 @font-face {
     font-family: "HattonMedium" !important;
     src: url("../public/fonts/Hatton/Hatton-Medium.otf") format("truetype");
-    font-weight: normal;
+    font-weight: medium;
     font-style: normal;
 }
 @font-face {
     font-family: "AntiqueOliveLight";
     src: url("../public/fonts/AntiqueOliT/AntiqOliTLig.otf") format("truetype");
-    font-weight: normal;
+    font-weight: lighter;
     font-style: normal;
 }
 
@@ -19,13 +19,7 @@
 }
 
 .main {
-    background-image: url("../public/images/index5.webp"),
-        linear-gradient(
-            90deg,
-            rgba(122, 120, 123, 1) 0%,
-            rgba(145, 142, 147, 1) 38%,
-            rgba(182, 180, 184, 1) 100%
-        );
+    background-image: url("../public/images/index5.webp");
     background-size: 600px, 100%;
     background-repeat: no-repeat;
     background-position: right 20% bottom 0%;
