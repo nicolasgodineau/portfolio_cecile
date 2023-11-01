@@ -1,95 +1,198 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import React from "react";
+import {
+    Typography,
+    Grid,
+    Button,
+    List,
+    ListItem,
+    Box,
+    Container,
+} from "@mui/material";
+import styles from "@/app/page.module.css";
+import Link from "next/link";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/app/styles/theme";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+const Home: React.FC = () => {
+    const items: string[] = [
+        "ART DIRECTOR,",
+        "GRAPHIC DESIGNER,",
+        "PHOTOGRAPHY LOVER,",
+        "INTUITION TRUSTER.",
+    ];
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    return (
+        <ThemeProvider theme={theme}>
+            <main className={`${styles.main} ${styles.background}`}>
+                {/*                 <Grid
+                    container
+                    sx={{
+                        maxWidth: "500px",
+                        paddingTop: "15vh",
+                        marginLeft: "3vw",
+                    }}
+                >
+                    <Grid item xs={6} sx={{ padding: "0" }}>
+                        <Typography
+                            variant="h4"
+                            component="h1"
+                            className={styles["font_HattonMedium"]}
+                            sx={{ textAlign: "right" }}
+                        >
+                            Cécile A.
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6} sx={{ padding: "0" }}></Grid>
+                    <Grid
+                        item
+                        xs={6}
+                        sx={{
+                            height: "400px",
+                            padding: "0",
+                        }}
+                    ></Grid>
+                    <Grid
+                        item
+                        xs={6}
+                        sx={{
+                            height: "400px",
+                            padding: "0",
+                            borderLeft: "2px solid white",
+                        }}
+                    ></Grid>
+                    <Grid item xs={6} sx={{ padding: "0" }}></Grid>
+                    <Grid
+                        item
+                        xs={6}
+                        sx={{
+                            padding: "0",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.5rem",
+                        }}
+                    >
+                        <List>
+                            {items.map((item, index) => (
+                                <ListItem
+                                    key={index}
+                                    sx={{
+                                        paddingLeft: "0",
+                                        fontSize: "1rem",
+                                        fontWeight: "lighter",
+                                    }}
+                                >
+                                    {item}
+                                </ListItem>
+                            ))}
+                        </List>
+                        <Button
+                            variant="contained"
+                            sx={{
+                                justifyContent: "start",
+                                fontWeight: "lighter",
+                                backgroundColor: "white",
+                                color: "black",
+                                textAlign: "left",
+                                paddingRight: "2rem",
+                                fontSize: "1rem",
+                                borderRadius: "0px",
+                                lineHeight: "3rem",
+                                ":hover": {
+                                    backgroundColor: "black",
+                                    color: "white",
+                                },
+                            }}
+                        >
+                            MORE HERE.
+                        </Button>
+                    </Grid>
+                </Grid> */}
+                <Container
+                    sx={{
+                        marginRight: 0,
+                        marginLeft: "7rem",
+                        paddingLeft: "7rem",
+                        paddingTop: "7rem",
+                        maxWidth: "fit-content",
+                    }}
+                >
+                    <Box
+                        sx={{
+                            width: "fit-content",
+                        }}
+                    >
+                        <Typography
+                            variant="h4"
+                            component="h1"
+                            className={styles["font_HattonMedium"]}
+                            sx={{
+                                width: "fit-content",
+                                position: "relative",
+                                "&::after": {
+                                    content: '""',
+                                    position: "absolute",
+                                    height: "400px",
+                                    width: "2px",
+                                    top: "40px",
+                                    right: "1.1px",
+                                    borderLeft: "2px solid white",
+                                },
+                            }}
+                        >
+                            Cécile A.
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            width: "fit-content",
+                            paddingLeft: "150px",
+                            paddingTop: "390px",
+                        }}
+                    >
+                        <List>
+                            {items.map((item, index) => (
+                                <ListItem
+                                    key={index}
+                                    sx={{
+                                        paddingLeft: "0",
+                                        fontSize: "1rem",
+                                        fontWeight: "lighter",
+                                    }}
+                                    className={styles["font_AntiqueOliveLight"]}
+                                >
+                                    {item}
+                                </ListItem>
+                            ))}
+                        </List>
+                        <Link href="/contact" passHref>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    justifyContent: "start",
+                                    fontWeight: "lighter",
+                                    backgroundColor: "white",
+                                    color: "black",
+                                    textAlign: "left",
+                                    paddingRight: "4rem",
+                                    fontSize: "1rem",
+                                    borderRadius: "0px",
+                                    lineHeight: "3rem",
+                                    ":hover": {
+                                        backgroundColor: "black",
+                                        color: "white",
+                                    },
+                                }}
+                                className={styles["font_AntiqueOliveLight"]}
+                            >
+                                MORE HERE.
+                            </Button>
+                        </Link>
+                    </Box>
+                </Container>
+            </main>
+        </ThemeProvider>
+    );
+};
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Home;
