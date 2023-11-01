@@ -34,3 +34,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/fonts/AntiqueOliT/AntiqOliTBol.otf
+public/fonts/AntiqueOliT/AntiqOliTBolCon.otf
+public/fonts/AntiqueOliT/AntiqOliTCom.otf
+public/fonts/AntiqueOliT/AntiqOliTComIta.otf
+public/fonts/AntiqueOliT/AntiqOliTMed.otf
+public/fonts/AntiqueOliT/AntiqOliTReg.otf
+public/fonts/AntiqueOliT/AntiqOliTRegCon.otf
+public/fonts/AntiqueOliT/AntiqOliTRegIta.otf
+public/fonts/Hatton/Hatton-Bold.otf
+public/fonts/Hatton/Hatton-Light.otf
+public/fonts/Hatton/Hatton-Ultrabold.otf
+public/fonts/Hatton/Hatton-Ultralight.otf
+public/fonts/Hatton/Hatton-Variable.ttf
