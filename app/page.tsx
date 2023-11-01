@@ -132,7 +132,7 @@ const Home: React.FC = () => {
                                 "&::after": {
                                     content: '""',
                                     position: "absolute",
-                                    height: "400px",
+                                    height: "56vh",
                                     width: "2px",
                                     top: "40px",
                                     right: "1.1px",
@@ -146,8 +146,17 @@ const Home: React.FC = () => {
                     <Box
                         sx={{
                             width: "fit-content",
-                            paddingLeft: "150px",
-                            paddingTop: "390px",
+                            paddingLeft: "134px",
+                            paddingTop: "56vh",
+                            "&::before": {
+                                content: '""',
+                                position: "absolute",
+                                height: "400px",
+                                width: "2px",
+                                top: "40px",
+                                right: "1.1px",
+                                borderLeft: "2px solid white",
+                            },
                         }}
                     >
                         <List>

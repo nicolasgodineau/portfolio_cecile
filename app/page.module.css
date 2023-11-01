@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "HattonMedium";
+    font-family: "HattonMedium" !important;
     src: url("../public/fonts/Hatton/Hatton-Medium.otf") format("truetype");
     font-weight: normal;
     font-style: normal;
