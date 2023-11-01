@@ -25,89 +25,6 @@ const Home: React.FC = () => {
     return (
         <ThemeProvider theme={theme}>
             <main className={`${styles.main} ${styles.background}`}>
-                {/*                 <Grid
-                    container
-                    sx={{
-                        maxWidth: "500px",
-                        paddingTop: "15vh",
-                        marginLeft: "3vw",
-                    }}
-                >
-                    <Grid item xs={6} sx={{ padding: "0" }}>
-                        <Typography
-                            variant="h4"
-                            component="h1"
-                            className={styles["font_HattonMedium"]}
-                            sx={{ textAlign: "right" }}
-                        >
-                            Cécile A.
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={6} sx={{ padding: "0" }}></Grid>
-                    <Grid
-                        item
-                        xs={6}
-                        sx={{
-                            height: "400px",
-                            padding: "0",
-                        }}
-                    ></Grid>
-                    <Grid
-                        item
-                        xs={6}
-                        sx={{
-                            height: "400px",
-                            padding: "0",
-                            borderLeft: "2px solid white",
-                        }}
-                    ></Grid>
-                    <Grid item xs={6} sx={{ padding: "0" }}></Grid>
-                    <Grid
-                        item
-                        xs={6}
-                        sx={{
-                            padding: "0",
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "0.5rem",
-                        }}
-                    >
-                        <List>
-                            {items.map((item, index) => (
-                                <ListItem
-                                    key={index}
-                                    sx={{
-                                        paddingLeft: "0",
-                                        fontSize: "1rem",
-                                        fontWeight: "lighter",
-                                    }}
-                                >
-                                    {item}
-                                </ListItem>
-                            ))}
-                        </List>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                justifyContent: "start",
-                                fontWeight: "lighter",
-                                backgroundColor: "white",
-                                color: "black",
-                                textAlign: "left",
-                                paddingRight: "2rem",
-                                fontSize: "1rem",
-                                borderRadius: "0px",
-                                lineHeight: "3rem",
-                                ":hover": {
-                                    backgroundColor: "black",
-                                    color: "white",
-                                },
-                            }}
-                        >
-                            MORE HERE.
-                        </Button>
-                    </Grid>
-                </Grid> */}
                 <Container
                     sx={{
                         marginRight: 0,
@@ -174,7 +91,7 @@ const Home: React.FC = () => {
                                 </ListItem>
                             ))}
                         </List>
-                        <Link href="/contact" passHref>
+                        <Link href="/portfolio" passHref>
                             <Button
                                 variant="contained"
                                 sx={{
